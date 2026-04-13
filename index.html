@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selva Dashboard</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 32px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 20px;
+    }
+
+   .card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  width: 180px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+    .card:hover {
+      transform: scale(1.1);
+      background: #00c6ff;
+      color: black;
+    }
+
+    .card i {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🚀 My Applications</h1>
+
+<div class="container">
+
+  <!-- SAC Prod -->
+  <div class="card" onclick="openApp('https://seafarer.synergymarine.in/')">
+    <i class="fa-solid fa-ship"></i><br>
+    SAC Prod
+  </div>
+  
+   <!-- SAC UAT -->
+  <div class="card" onclick="openApp('https://seafarer-staging.synergymarine.in//')">
+    <i class="fa-solid fa-ship"></i><br>
+    SAC UAT
+  </div>
+
+  <!-- Freshdesk -->
+  <div class="card" onclick="openApp('https://synergygrouphelp.freshdesk.com/a/dashboard/default')">
+    <i class="fa-solid fa-headset"></i><br>
+    Fresh Desk
+  </div>
+
+  <!-- Jira -->
+  <div class="card" onclick="openApp('https://synergymarinegroup.atlassian.net/issues/?filter=10740')">
+    <i class="fa-solid fa-diagram-project"></i><br>
+    Jira
+  </div>
+
+ <!-- Shore IDP Prod -->
+  <div class="card" onclick="openApp('https://admin.synergymarine.in/Identity/UserRoles/9d61b885-8922-46be-bc82-564b775cdeeb')">
+    <i class="fa-solid fa-user-tie"></i><br>
+    Shore IDP Prod
+  </div>
+  
+  <!-- Shore IDP UAT -->
+  <div class="card" onclick="openApp('https://shoreidp-admin-staging.synergymarine.in/Identity/Users')">
+    <i class="fa-solid fa-user-tie"></i><br>
+    Shore IDP UAT
+  </div> 
+  
+ <!-- Seafarer IDP -->
+  <div class="card" onclick="openApp('https://admin-seafarer.synergymarine.in/Identity/UserProfile/b1d88407-456c-4c0b-84f7-b17ada1eacb8')">
+  <i class="fa-solid fa-user-graduate"></i>
+    Seafarer IDP
+  </div>  
+ 
+ 
+ 
+ <!-- Poseidon -->
+  <div class="card" onclick="openApp('https://poseidon.synergymarinegroup.com/EnterprisePoseidon/')">
+  <span style="font-size:40px; font-weight:bold;">P</span><br>
+    Poseidon 
+  </div> 
+ 
+</div>
+
+<script>
+  function openApp(url) {
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
